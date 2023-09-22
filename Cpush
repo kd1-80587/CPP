@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+struct Time
+{
+    int hr;
+    int min;
+};
+
+void acceptTime(struct Time *t)
+{
+    printf("Enter the hrs = ");
+    scanf("%d", &t->hr);
+    printf("Enter the mins = ");
+    scanf("%d", &t->min);
+}
+
+void displayTime(struct Time t)
+{
+    printf("Time = %d : %d \n", t.hr, t.min);
+}
+
+int main()
+{
+    struct Time t1;
+    acceptTime(&t1);
+    displayTime(t1);
+
+    return 0;
+}
